@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rank/rank"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#8B4513",
+    "navigationBarTitleText": "敲木鱼",
+    "navigationBarTextStyle": "white"
+  }
+}
