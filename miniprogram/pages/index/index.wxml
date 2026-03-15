@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 功德显示 -->
+  <view class="merit-display">
+    <text class="merit-label">功德</text>
+    <text class="merit-value">{{merit}}</text>
+  </view>
+
+  <!-- 连击提示 -->
+  <view class="combo-area" wx:if="{{combo >= 10}}">
+    <text class="combo-text">{{combo}} 连击!</text>
+  </view>
+
+  <!-- 木鱼 -->
+  <view class="fish-area">
+    <!-- 浮字动画 -->
+    <view class="float-text {{floatAnim ? 'float-up' : ''}}"
+          wx:if="{{showFloat}}"
+          style="left:{{floatX}}rpx;">
+      功德+1
+    </view>
+
+    <!-- 连击特效光圈 -->
+    <view class="effect-ring {{comboLevel}}" wx:if="{{comboLevel}}"></view>
+
+    <image
+      class="fish-img {{tapAnim ? 'fish-tap' : ''}}"
+      src="{{skinImage}}"
+      mode="aspectFit"
+      bindtap="onTap"
+    />
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-bar">
+    <view class="btn" bindtap="goSkin">皮肤</view>
+    <view class="btn" bindtap="goRank">排行榜</view>
+    <button class="btn share-btn" open-type="share">分享</button>
+  </view>
+</view>
